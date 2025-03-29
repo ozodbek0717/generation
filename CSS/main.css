@@ -33,6 +33,13 @@
   margin: 0 auto;
 }
 
+.site-header {
+  position: fixed;
+  background-color: white;
+  top: 0;
+  width: 100%;
+}
+
 .header-left-content-wrapper {
   display: flex;
   align-items: center;
@@ -41,7 +48,63 @@
   gap: 20px;
 }
 
-.header-left-content-wrapper > a {
+.header-left-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 14px 11px;
+  gap: 5px;
+  border-left: 1px solid gray;
+  color: white;
+  transition: all 0.3s;
+}
+.header-left-content:hover {
+  background-color: #4762FF;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.header-left-content:hover > span {
+  color: white;
+}
+.header-left-content:hover > svg {
+  color: white;
+}
+.header-left-content:hover > .header-content__popap {
+  height: 88px;
+  padding: 5px;
+}
+.header-left-content > span ~ svg {
+  transition: transform 0.3s;
+}
+.header-left-content:hover > span ~ svg {
+  transform: rotate(180deg);
+}
+
+.header-content__popap {
+  position: absolute;
+  background-color: #4762FF;
+  border-left: 1px solid white;
+  color: white;
+  top: 48px;
+  width: 100%;
+  left: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 0;
+  overflow: hidden;
+}
+.header-content__popap > li {
+  text-align: center;
+  padding: 10px 0;
+  cursor: pointer;
+}
+.header-content__popap:hover {
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+}
+
+.header-left-content-wrapper > span {
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
@@ -151,6 +214,10 @@
 
 .header-btn > img:hover {
   color: #4762FF;
+}
+
+.site-main {
+  margin-top: 180px;
 }
 
 .hero-section {
@@ -322,4 +389,57 @@
 .catalog__card--btn:hover {
   color: #4762FF;
   background-color: #FFFFFF;
+}
+
+.content-card__wrapper {
+  width: 816px 200px;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 58px;
+}
+
+.content-card {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.card-text {
+  width: 813px;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 10px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.content-card__wrapper > img {
+  padding-top: 114px;
+}
+
+.card-item {
+  text-align: center;
+  margin: 0 auto;
+}
+.card-item > h2 {
+  margin-top: 67px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.card-img {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
 }/*# sourceMappingURL=main.css.map */

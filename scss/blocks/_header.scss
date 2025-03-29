@@ -1,3 +1,10 @@
+
+.site-header{
+  position: fixed;
+  background-color: white;
+  top: 0;
+  width: 100%;
+}
 .header-left-content-wrapper{
     display: flex;
     align-items: center;
@@ -5,7 +12,63 @@
     margin: 26px 0;
     gap: 20px;
   }
-  .header-left-content-wrapper >a{
+  .header-left-content{
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 14px 11px;
+    gap: 5px;
+    border-left: 1px solid gray;
+    color: white;
+    transition: all 0.3s;
+
+    &:hover{
+      background-color: #4762FF;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    &:hover > span{
+      color: white;
+    }
+    &:hover > svg{
+      color: white;
+    }
+    &:hover > .header-content__popap{
+      height: 88px;
+      padding: 5px;
+    }
+    & > span ~ svg{
+      transition: transform 0.3s ;
+    }
+    &:hover > span ~ svg{
+      transform: rotate(180deg);
+    }
+  }
+  .header-content__popap{
+    position: absolute; 
+    background-color: #4762FF;
+    border-left: 1px solid white;
+    color: white;
+    top: 48px;
+    width: 100%;
+    left: 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 0;
+    overflow: hidden;
+
+    & > li {
+      text-align: center;
+      padding: 10px 0;
+      cursor: pointer;
+    }
+    &:hover{
+      background-color: white;
+      border-radius: 10px;
+      color: black;
+    }
+  }
+  .header-left-content-wrapper >span{
     font-weight: 400;
     font-size: 16px;
     line-height: 100%;
